@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.crudbackend.model.Estado;
@@ -20,6 +21,11 @@ public class EstadoService {
 	public List<Estado> findAll() {
 		
 		return estadoRepository.findAll();
+	}
+
+	public List<Estado> findAll(Sort sort) {
+
+		return estadoRepository.findAll(sort);
 	}
 	
 	public List<Estado> findAllByCountry(Long id){

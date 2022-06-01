@@ -34,7 +34,7 @@ public class PersonaRest {
 		try {
 		Persona personaGuardada = personaService.save(persona);
 		
-	
+			//retorna una persona guardada al frontend
 			return ResponseEntity.created(new URI("/personas/"+personaGuardada.getId())).body(personaGuardada);
 			
 		} catch (Exception e) {
